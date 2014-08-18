@@ -26,15 +26,16 @@ class Choice
 	protected $label;
 
 	/**
-	 * @ORM\ManyToOne(targetEntity="Choice", inversedBy="votes")
-	 * @ORM\JoinColumn(name="choice_id", referencedColumnName="id")
+	 * @ORM\ManyToOne(targetEntity="Poll", inversedBy="choices")
+	 * @ORM\JoinColumn(name="poll_id", referencedColumnName="id")
 	 */
-	protected $choice;
+	protected $poll;
 
 	/**
 	 * @ORM\OneToMany(targetEntity="Vote", mappedBy="Choice")
 	 */
 	protected $votes;
+
     /**
      * Constructor
      */

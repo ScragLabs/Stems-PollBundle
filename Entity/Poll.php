@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /** 
  * @ORM\Entity()
- * @ORM\Table(name="stems_poll_poll")
+ * @ORM\Table(name="stm_poll_poll")
  */
 class Poll
 {
