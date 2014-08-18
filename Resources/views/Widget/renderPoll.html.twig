@@ -1,12 +1,11 @@
 <div class="widget-poll" >
-		<h2>{{ poll.title }}</h2>
-		<div class="choices">
-			{% for option in poll.options %}
-				<div class="choice">
-					<label>{{ option.label }}</label>
-					<a href="/rest/poll/vote/{{ option.id }}"><i class="fa fa-circle-o"></i></a>
-				</div>
-			{% endfor %}
-		</div>
-	</a>
+	<h2>{{ poll.description }}</h2>
+	<div class="choices">
+		{% for option in poll.options %}
+			<div class="choice">
+				<label>{{ option.label }}</label>
+				<a href="/rest/poll/vote/{{ option.id }}"><i class="fa fa-circle-o"></i></a>
+			</div>
+		{% endfor %}
+	</div>
 </div>
