@@ -38,6 +38,17 @@ class Vote
 	protected $choice;
 
     /**
+     * Constructor
+     */
+    public function __construct($choice=null, $ip=null)
+    {
+        if ($choice) {
+            $this->choice = $choice;
+            $this->ip     = $ip;
+        }
+    }
+
+    /**
      * Get id
      *
      * @return integer 
