@@ -32,7 +32,7 @@ class Choice
 	protected $poll;
 
 	/**
-	 * @ORM\OneToMany(targetEntity="Vote", mappedBy="Choice")
+	 * @ORM\OneToMany(targetEntity="Vote", mappedBy="choice")
 	 */
 	protected $votes;
 

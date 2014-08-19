@@ -18,7 +18,7 @@ class WidgetController extends Controller
 	{
 		// get the latest blog post
 		$em   = $this->getDoctrine()->getEntityManager();
-		$poll = $em->getRepository('StemsPollBundle:Post')->find($id);
+		$poll = $em->getRepository('StemsPollBundle:Poll')->find($id);
 
 		return $this->render('StemsPollBundle:Widget:renderPoll.html.twig', array(
 			'poll' 	=> $poll,

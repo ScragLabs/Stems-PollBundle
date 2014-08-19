@@ -56,9 +56,10 @@ class Poll
 	protected $expiry;
 
 	/**
-	 * @ORM\OneToMany(targetEntity="Choice", mappedBy="Poll")
+	 * @ORM\OneToMany(targetEntity="Choice", mappedBy="poll")
 	 */
 	protected $choices;
+
     /**
      * Constructor
      */
