@@ -2,6 +2,7 @@
 
 namespace Stems\PollBundle\Entity;
 
+use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
@@ -27,6 +28,7 @@ class Vote
 	protected $ip;
 
 	/** 
+     * @Gedmo\Timestampable(on="create")
 	 * @ORM\Column(type="datetime")
 	 */
 	protected $created;
@@ -42,6 +44,8 @@ class Vote
      */
     public function __construct($choice=null, $ip=null)
     {
+        $this->created = new \DateTime();
+
         if ($choice) {
             $this->choice = $choice;
             $this->ip     = $ip;

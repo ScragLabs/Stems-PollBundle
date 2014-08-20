@@ -78,26 +78,26 @@ class Choice
     }
 
     /**
-     * Set choice
+     * Set poll
      *
-     * @param \Stems\PollBundle\Entity\Choice $choice
-     * @return Choice
+     * @param \Stems\PollBundle\Entity\Poll $poll
+     * @return poll
      */
-    public function setChoice(\Stems\PollBundle\Entity\Choice $choice = null)
+    public function setPoll(\Stems\PollBundle\Entity\Poll $poll = null)
     {
-        $this->choice = $choice;
+        $this->poll = $poll;
     
         return $this;
     }
 
     /**
-     * Get choice
+     * Get poll
      *
-     * @return \Stems\PollBundle\Entity\Choice 
+     * @return \Stems\PollBundle\Entity\Poll 
      */
-    public function getChoice()
+    public function getPoll()
     {
-        return $this->choice;
+        return $this->poll;
     }
 
     /**

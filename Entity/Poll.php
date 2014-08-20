@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 
 /** 
- * @ORM\Entity()
+ * @ORM\Entity(repositoryClass="Stems\PollBundle\Repository\PollRepository")
  * @ORM\Table(name="stm_poll_poll")
  */
 class Poll

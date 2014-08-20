@@ -1,3 +1,11 @@
-stems_poll_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: StemsPollBundle:Default:index }
+# Admin routes
+
+stems_admin_poll_overview:
+    pattern:  /admin/poll
+    defaults: { _controller: StemsPollBundle:Rest:vote }
+
+# Rest routes
+
+stems_rest_poll_vote:
+    pattern:  /rest/poll/vote/{id}
+    defaults: { _controller: StemsPollBundle:Rest:vote }
