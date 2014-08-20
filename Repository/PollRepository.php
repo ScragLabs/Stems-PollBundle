@@ -29,7 +29,7 @@ class PollRepository extends EntityRepository
 		$qb->setParameter('ip', $ip);
 
 		// True if there's one or more results
-		if (count($qb->getQuery()->getResult() > 0) {
+		if (count($qb->getQuery()->getResult()) > 0) {
 			return true;
 		} else {
 			return false;
