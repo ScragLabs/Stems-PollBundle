@@ -34,7 +34,7 @@ class RestController extends BaseRestController
 		}
 
 		// See if this IP has already voted on the poll
-		if ($em->getRepository('StemsPollBundle:Poll')->checkIpAlreadyVoted($ip, $poll)) {
+		if ($em->getRepository('StemsPollBundle:Poll')->checkIpAlreadyVoted($ip, $choice->getPoll())) {
 			return $this->error('You\'ve already voted on this poll.')->setCallback('votingComplete')->sendResponse();
 		}
 
