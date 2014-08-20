@@ -14,6 +14,14 @@ class AdminController extends BaseAdminController
 	protected $home = 'stems_admin_poll_overview';
 
 	/**
+	 * Render the dialogue for the module's dashboard entry in the admin panel
+	 */
+	public function dashboardAction()
+	{
+		return $this->render('StemsPollBundle:Admin:dashboard.html.twig', array());
+	}
+
+	/**
 	 * Polls overview page showing all polls
 	 */
 	public function indexAction()
