@@ -59,7 +59,7 @@ class Choice
 
         $percentage = (count($this->getVotes()) / $total) * 100;
 
-        return intval($percentage);
+        return round($percentage);
     }
 
     /**
