@@ -1,0 +1,6 @@
+{% for choice in poll.choices %}
+	<div class="choice">
+		<label>{{ choice.label }}</label>
+		<p class="total">{{ choice.percentage }}%</p>
+	</div>
+{% endfor %}

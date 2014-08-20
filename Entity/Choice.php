@@ -45,6 +45,24 @@ class Choice
     }
     
     /**
+     * Get percentage
+     *
+     * @return integer 
+     */
+    public function getPercentage()
+    {
+        $total = 0;
+
+        foreach ($this->getPoll()->getChoices() as $choice) {
+            $total += count($choice->getVotes());
+        }
+
+        $percentage = (count($this->getVotes()) / $total) * 100;
+
+        return intval($percentage);
+    }
+
+    /**
      * Get id
      *
      * @return integer 

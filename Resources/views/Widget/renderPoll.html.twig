@@ -2,12 +2,19 @@
 	<h5><span>Poll</span></h5>
 	<div class="description">
 		<p>{{ poll.description }}</p>
+		{% if poll.active == false %}
+			<p class="message">This poll is closed</p>
+		{% endif %}
 	</div>
 	<div class="choices">
 		{% for choice in poll.choices %}
 			<div class="choice">
 				<label>{{ choice.label }}</label>
-				<a data-url="/rest/poll/vote/{{ choice.id }}" class="rest-get-request"><i class="fa fa-circle-o"></i></a>
+				{% if voted or poll.active == false %}
+					<p class="total">{{ choice.percentage }}%</p>
+				{% else %}
+					<a data-url="/rest/poll/vote/{{ choice.id }}" class="rest-get-request"><i class="fa fa-circle-o"></i></a>
+				{% endif %}
 			</div>
 		{% endfor %}
 	</div>
