@@ -40,7 +40,7 @@ class SectionPoll implements SectionInstanceInterface
     public function render($services, $link)
     {
         // Render the twig template
-        return $services->getTwig()->render('StemsBlogBundle:Section:poll.html.twig', array(
+        return $services->getTwig()->render('StemsPollBundle:Section:poll.html.twig', array(
             'section'   => $this,
             'link'      => $link,
         ));
@@ -59,7 +59,7 @@ class SectionPoll implements SectionInstanceInterface
         $form = $services->createSectionForm($link, $this);
 
         // Render the admin form html
-        return $services->getTwig()->render('StemsBlogBundle:Section:pollForm.html.twig', array(
+        return $services->getTwig()->render('StemsPollBundle:Section:pollForm.html.twig', array(
             'form'      => $form->createView(),
             'section'   => $this,
             'link'      => $link,
